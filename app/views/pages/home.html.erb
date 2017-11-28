@@ -1,21 +1,13 @@
-<div class="main mainimg">
- <a id="simple-menu" href="#sidr"><img id="menuBtn" src="/assets/menu-white.svg" class="sidemenu" onclick="swapMenuImage(this.src)"></a>
- <div id="sidr">
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
- </div>
- <div class="container">
-  <div class="row">
-
-    <div class="content col-md-6 col-md-offset-6">
-      <h1>Share and create your travel profile</h1>
-      <p><a class="btn btn-primary" href="about">Learn more</a></p>
+<div class="home-main">
+  <%= image_tag("menu-black.svg", alt: "Open", class:"icon-menu", width:"24px") %>
+  <div class="container">
+    <div class="row">
+      <div class="content col-md-6 col-md-offset-6"> <h1>S t o r i e s </h1>
+        <h2>Share and create your travel profiles</h2>
+      <p><%= link_to "Learn more", "about", :class => "btn btn-primary" %></p>
+      </div>
     </div>
   </div>
- </div>
 </div>
 <div class="home-supporting">
   <div class="container">
@@ -23,16 +15,12 @@
     <p>Create a digital journal of your trip filled with your photos, notes, ideas and more.</p>
   </div>
 </div>
-<div class="home-secondary secimg">
-  <div class="container">
-  </div>
+<div class="home-secondary">
+  <div class="container"> </div>
 </div>
 <div class="home-about">
   <div class="container">
     <h2>Find adventures</h2>
-    <p><a class="btn btn-primary" href="about">Learn more</a></p>
+    <p><%= link_to "Learn more", "about", :class => "btn btn-primary" %></p>
   </div>
 </div>
-<footer class="text-center">
-    @2017 Martina Cho
-</footer>

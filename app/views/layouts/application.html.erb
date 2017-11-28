@@ -7,13 +7,29 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <!-- Include jQuery -->
-  <script src="https://cdn.jsdelivr.net/jquery/2.2.0/jquery.min.js"></script>
-  <!-- Include the Sidr JS -->
-  <script src="https://cdn.jsdelivr.net/jquery.sidr/2.2.1/jquery.sidr.min.js"></script>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
 </head>
 <body>
+  <div class="menu">
+    <ul>
+      <li>
+        <%= link_to "Home", root_path %>
+      </li>
+      <li>
+        <%= link_to "About", "/about" %>
+      </li>
+      <li>
+        <a href="#">Contact</a>
+      </li>
+    </ul>
+    <%= image_tag("close-black.svg", class: "icon-close", alt:"Close", width:"24px") %>
+  </div>
 <%= yield %>
+<div class="footer">
+  <div class="container">
+    <p>@2017 Martina Cho</p>
+  </div>
+</div>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>
