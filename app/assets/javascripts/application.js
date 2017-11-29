@@ -13,6 +13,19 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+var sidem = function(){
+  $(".open-icon").click(function(e){
+    e.preventDefault();
+    $(".smenu").animate({
+      left:"0px"
+    },200)
+  }),$(".close-icon").click(function(e){
+    e.preventDefault();
+    $(".smenu").animate({
+      left:"-240px"
+    },200)
+  })
+};
 var sidemenu=function(){
   $(".open-icon").click(function(){
     $(".smenu").animate({
@@ -24,4 +37,4 @@ var sidemenu=function(){
     },200)
   })
 };
-$(document).ready(sidemenu);
+$(document).ready(sidem);
