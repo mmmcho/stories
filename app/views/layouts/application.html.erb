@@ -10,7 +10,7 @@
 
 </head>
 <body>
-  <div class="menu">
+  <div class="smenu">
     <ul>
       <li>
         <%= link_to "Home", root_path %>
@@ -19,10 +19,10 @@
         <%= link_to "About", "/about" %>
       </li>
       <li>
-        <a href="#">Contact</a>
+        <%= link_to "Contact", "/signups/new" %>
       </li>
     </ul>
-    <%= image_tag("close-black.svg", class: "icon-close", alt:"Close", width:"24px") %>
+    <%= image_tag("close-black.svg", class: "close-icon", alt:"Close") %>
   </div>
 <%= yield %>
 <div class="footer">
@@ -30,6 +30,7 @@
     <p>@2017 Martina Cho</p>
   </div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>

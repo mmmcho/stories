@@ -9,14 +9,13 @@ h1 {
 }
 h2 {
   font-size:45px;
-  font-weight:300
-}
-.btn-default,.btn-primary {
-  border-radius:0;
-  font-size:16px;
-  padding:12px 26px
+  font-weight:300;
+  color:#13D9CC
 }
 .btn-primary {
+  border-radius:0;
+  font-size:16px;
+  padding:12px 26px;
   background-color:#B9361A;
   border-color: #951D04;
 }
@@ -27,12 +26,15 @@ h2 {
 .home-main {
   background:url(beach.jpg) no-repeat center center;
   background-size:cover;
-  height:700px
+  height:500px
+}
+.home-main h2 {
+  text-shadow:0 2px 3px rgba(0,0,0,0.4)
 }
 .home-main .content {
   position:relative;
   top:150px;
-  text-align:center
+  text-align:center;
 }
 .home-main h1 {
   color:#fff;
@@ -46,55 +48,40 @@ h2 {
   text-align:center
 }
 .home-supporting h2,.home-about h2,.about-supporting h2 {
-  color:#000;
   margin:30px 0
 }
 .home-main p,.home-supporting p,.about-supporting p {
   font-size:21px;
-  font-weight:100
+  font-weight:100;
+  color:#B9361A
+}
+.home-secondary {
+  background:url(venice.jpg) no-repeat center center;
+  background-size:cover;
+  height:500px
 }
 .about-supporting p {
   margin-top:30px
 }
-.home-secondary {
-  background:url(market.jpg) no-repeat center center;
+.about-main {
+  background:url(gondola.jpg) no-repeat center center;
   background-size:cover;
   height:500px
 }
-.about-main {
-  background:url(jellyfish.jpg) no-repeat center center;
-  background-size:cover;
-  height:700px
-}
 .about-main .content {
   position:relative;
-  top:150px;
+  top:350px;
   text-align:center
 }
 .about-main h1 {
   color:#fff;
-  font-weight:100;
+  font-weight:300;
   margin-bottom:30px;
   text-shadow:0 2px 3px rgba(0,0,0,0.4)}
 .about-main p {
   font-size:21px;
-  font-weight:100
-}
-.contact-main {
-  background:url(venice.jpg) no-repeat center center;
-  background-size:cover;
-  height:700px
-}
-.contact-main .content {
-  position:relative;
-  top:150px;
-  text-align:center
-}
-.contact-main h1 {
-  color:#fff;
   font-weight:100;
-  margin-bottom:30px;
-  text-shadow:0 2px 3px rgba(0,0,0,0.4)
+  color:#13D9CC
 }
 .footer {
   background-color:#F9F9F9;
@@ -107,7 +94,7 @@ h2 {
   font-size:12px;
   color:#B9361A
 }
-.menu {
+.smenu {
   background-color:#fff;
   height:100%;
   position:fixed;
@@ -115,47 +102,31 @@ h2 {
   left:-240px;
   z-index:1
 }
-.menu ul {
+.smenu ul {
   list-style:none;
   padding-left:0
 }
-.menu li a,.menu li a:visited {
+.smenu li a,.smenu li a:visited {
   color:#000;
   display:block;
   font-size:18px;
   font-weight:bold;
   padding:30px 40px
 }
-.menu li a:hover {
+.smenu li a:hover {
   color:#B9361A
 }
-.menu .icon-close {
+.smenu .close-icon {
   position:absolute;
   top:30px;
   right:30px;
-  cursor:pointer
+  cursor:pointer;
+  width: 24px
 }
-.icon-menu {
+.open-icon {
   position:absolute;
   top:30px;
   left:30px;
-  cursor:pointer
+  cursor:pointer;
+  width: 24px
   }
-form {
-  text-align:left
-}
-.form-control,.btn-default {
-  background-color:rgba(255,255,255,0.8);
-  border-radius:0
-}
-.form-control {
-  font-size:18px
-  }
-.form-group label {
-  font-size:16px;
-  color:#fff
-}
-.form-group input {
-  padding:20px 10px;
-  font-size:20px
-}

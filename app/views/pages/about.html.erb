@@ -1,12 +1,12 @@
 <div class="about-main">
-  <%= image_tag("menu-black.svg", alt: "Open", class: "icon-menu", width: "24px") %>
-  <div class="content container"> <h1>Inspire others with your memories</h1>
-    <p>Create a digital journal of your trip filled with your photos, notes, ideas and more.</p>
+  <%= image_tag("menu-black.svg", alt: "Open", class: "open-icon") %>
+  <div class="content container"> <h1>A digital journal</h1>
   </div>
 </div>
 <div class="about-supporting">
   <div class="container">
-    <h2>Create and share your travel profiles!</h2>
-    <p><a class="btn btn-primary" href="#">Sign up</a></p>
+    <h2>Inspiring travel memories</h2>
+    <p>Create a digital journal filled with travel photos, notes, ideas and more.</p>
+    <p><%= link_to "Sign up", "signups/new", :class => "btn btn-primary" %></p>
   </div>
 </div>
