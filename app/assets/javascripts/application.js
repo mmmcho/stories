@@ -14,21 +14,6 @@
 //= require turbolinks
 //= require_tree .
 
-var simenu=function(){
-  $(".open-icon").on("click",function(e){
-    e.preventDefault();
-    $('.smenu').animate({
-      left: '0px'
-    }, 200);
-  });
-  $(".close-icon").on("click", function(e){
-    e.preventDefault();
-    $('.smenu').animate({
-      left: '-240px'
-  }, 200);
-});
-};
-
 var sidemenu=function(){
   $(".open-icon").click(function(){
     $('.smenu').animate({
@@ -41,4 +26,14 @@ var sidemenu=function(){
   }, 200);
 });
 };
-$(document).ready(simenu);
+//$(document).ready(sidemenu);
+  $(".open-icon").click(function(){
+    $('.smenu').animate({
+      left: '0px'
+    }, 200);
+  });
+  $(".close-icon").click(function(){
+    $('.smenu').animate({
+      left: '-240px'
+  }, 200);
+  });
