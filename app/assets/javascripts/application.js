@@ -27,7 +27,7 @@ var sidemenu=function(){
 });
 };
 //$(document).ready(sidemenu);
-  $(".open-icon").click(function(){
+/*  $(".open-icon").click(function(){
     $('.smenu').animate({
       left: '0px'
     }, 200);
@@ -37,3 +37,4 @@ var sidemenu=function(){
       left: '-240px'
   }, 200);
   });
+*/
