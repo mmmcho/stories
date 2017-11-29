@@ -7,10 +7,10 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </head>
 <body>
-  <div class="smenu">
+  <div class="smenu" id="smenu">
     <ul>
       <li>
         <%= link_to "Home", root_path %>
@@ -22,7 +22,7 @@
         <%= link_to "Contact", "/signups/new" %>
       </li>
     </ul>
-    <%= image_tag("close-black.svg", class: "close-icon", alt:"Close") %>
+    <%= image_tag("close-black.svg", class: "close-icon", alt:"Close", onclick: "hideMenu()") %>
   </div>
 <%= yield %>
 <div class="footer">
@@ -30,7 +30,6 @@
     <p>@2017 Martina Cho</p>
   </div>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
 </body>
 </html>
