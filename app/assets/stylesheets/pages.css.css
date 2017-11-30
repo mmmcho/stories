@@ -12,14 +12,14 @@ h2 {
   font-weight:300;
   color:#13D9CC
 }
-.btn-primary {
+.btn-danger {
   border-radius:0;
   font-size:16px;
   padding:12px 26px;
   background-color:#B9361A;
   border-color: #951D04;
 }
-.btn-primary:hover {
+.btn-danger:hover {
   background-color:#AA2104;
   border-color:#951D04
 }
