@@ -1,93 +1,115 @@
-html,body {
-  margin:0
+@font-face {
+  font-family: 'Abril Fatface';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Abril Fatface'), local('AbrilFatface-Regular'), url(https://fonts.gstatic.com/s/abrilfatface/v9/X1g_KwGeBV3ajZIXQ9VnDgYWpCd0FFfjqwFBDnEN0bM.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
-body {
-  font-family:'Roboto', sans-serif
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Work Sans Medium'), local('WorkSans-Medium'), url(https://fonts.gstatic.com/s/worksans/v3/Nbre-U_bp6Xktt8cpgwaJBampu5_7CjHW5spxoeN3Vs.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+* {
+  box-sizing: border-box;
+}
+/*
+blue: #10b0d8
+gold: #ffb78c
+red: #B9361A
+*/
+html,body {
+  margin: 0px;
+  font-family: "Work Sans", "Arial", sans-serif;
+  text-align: center;
 }
 h1 {
-  font-size:50px
+  font-size:55px;
+  font-weight: 900;
+  font-family: "Abril Fatface", sans-serif;
+  letter-spacing: 2px;
+  color:#fff;
+  text-shadow:0 2px 3px rgba(0,0,0,0.4);
+  margin-bottom: 20px;
 }
 h2 {
   font-size:45px;
-  font-weight:300;
-  color:#13D9CC
+  color:#ffb78c;
+  padding: .55rem 0;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-family: "Abril Fatface", sans-serif;
+  margin-top: 0px;
 }
-.btn-danger {
-  border-radius:0;
+.quote {
+  display: block;
+  padding: 4.44rem 0;
+  margin-bottom: 3.33rem;
+  border-top: 4px solid #10b0d8;
+  border-bottom: 4px solid #10b0d8;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #10b0d8;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.btn {
+  border-radius:3px;
   font-size:16px;
   padding:12px 26px;
+  margin: 10px;
   background-color:#B9361A;
   border-color: #951D04;
+  color: #fff;
+  text-decoration: none;
 }
-.btn-danger:hover {
+.btn:hover {
   background-color:#AA2104;
-  border-color:#951D04
+  border-color:#951D04;
 }
 .home-main {
   background:url(beach.jpg) no-repeat center center;
   background-size:cover;
-  height:500px
+  height:600px;
+}
+.container {
+  display: grid;
 }
 .home-main h2 {
-  text-shadow:0 2px 3px rgba(0,0,0,0.4)
+  text-shadow:0 2px 3px rgba(0,0,0,0.4);
 }
-.home-main .content {
-  position:relative;
-  top:150px;
-  text-align:center;
+.home-main .banner {
+  left: 40%;
+  width: 50%;
 }
-.home-main h1 {
-  color:#fff;
-  font-weight:100;
-  margin-bottom:30px;
-  text-align:center;
-  text-shadow:0 2px 3px rgba(0,0,0,0.4)
+.about-main .banner {
+  top: 300px;
+}
+.banner {
+  position: relative;
+  top: 100px;
 }
 .home-supporting,.home-about,.about-supporting {
   padding:80px 0;
-  text-align:center
-}
-.home-supporting h2,.home-about h2,.about-supporting h2 {
-  margin:30px 0
-}
-.home-main p,.home-supporting p,.about-supporting p {
-  font-size:21px;
-  font-weight:100;
-  color:#B9361A
 }
 .home-secondary {
   background:url(venice.jpg) no-repeat center center;
   background-size:cover;
   height:500px
 }
-.about-supporting p {
-  margin-top:30px
-}
 .about-main {
   background:url(gondola.jpg) no-repeat center center;
   background-size:cover;
   height:500px
 }
-.about-main .content {
-  position:relative;
-  top:350px;
-  text-align:center
-}
-.about-main h1 {
-  color:#fff;
-  font-weight:300;
-  margin-bottom:30px;
-  text-shadow:0 2px 3px rgba(0,0,0,0.4)}
-.about-main p {
-  font-size:21px;
-  font-weight:100;
-  color:#13D9CC
-}
 .footer {
   background-color:#F9F9F9;
   border-top:solid 1px #F5F5F5;
   padding:40px 0 30px 0;
-  text-align:center
 }
 .footer p {
   text-transform:uppercase;
@@ -100,33 +122,34 @@ h2 {
   position:fixed;
   top:0;width:240px;
   left:-240px;
-  z-index:1
+  z-index:100;
+  text-align: left;
 }
 .smenu ul {
   list-style:none;
-  padding-left:0
+  padding-left:0;
 }
 .smenu li a,.smenu li a:visited {
   color:#000;
   display:block;
   font-size:18px;
   font-weight:bold;
-  padding:30px 40px
+  padding:30px 40px;
 }
 .smenu li a:hover {
-  color:#B9361A
+  color:#B9361A;
 }
 .smenu .close-icon {
   position:absolute;
   top:30px;
   right:30px;
   cursor:pointer;
-  width: 24px
+  width: 24px;
 }
 .open-icon {
   position:absolute;
   top:30px;
   left:30px;
   cursor:pointer;
-  width: 24px
+  width: 24px;
   }

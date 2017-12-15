@@ -4,35 +4,24 @@
 .contact-main {
   background:url(jellyfish.jpg) no-repeat center center;
   background-size:cover;
-  height:500px
-}
-.contact-main .content {
-  position:relative;
-  top:100px;
-  text-align:center
-}
-.contact-main h1 {
-  color:#fff;
-  font-weight:300;
-  margin-bottom:30px;
-  text-shadow:0 2px 3px rgba(0,0,0,0.4)
-}
-form {
-text-align:left
+  height:600px;
 }
 .form-control {
-background-color:rgba(255,255,255,0.8);
-border-radius:0;
-font-size:18px
+  background-color:rgba(255,255,255,0.8);
+  border-radius:0;
+  font-size:18px;
+  padding: 10px;
+  width: 350px;
+  margin-top: 3px;
 }
-.form-group input {
-padding:20px 10px;
-font-size:20px
-}
-#error_explanation {
-  color: red;
-  ul {
-    color: red;
-    margin: 0 0 30px 0;
-  }
+.error-box {
+  display: inline-block;
+  color: #B9361A;
+  background-color: #ccc;
+  opacity: 0.65;
+  border-radius:0;
+  font-size:18px;
+  padding: 10px;
+  width: 350px;
+  text-align: left;
 }

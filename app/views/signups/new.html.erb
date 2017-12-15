@@ -1,29 +1,18 @@
 <div class="contact-main">
     <%= image_tag("menu-black.svg", alt: "Open", class: "open-icon", onclick: "showMenu()") %>
-    <div class="content container">
-      <h1>Sign up for updates</h1>
-      <div class="row">
-        <div class="col-md-4 col-md-4-offset">
-        </div>
-        <div class="col-md-4">
-          <%= form_for @signup do |f| %>
-          <% if @signup.errors.any? %>
-          <div id="error_explanation">
-            <ul>
-              <% @signup.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
+    <div class="container banner">
+      <h1>Receive updates</h1>
+              <%= form_for @signup do |f| %>
+              <% if @signup.errors.any? %>
+              <div class="error-box">
+                  <% @signup.errors.full_messages.each do |msg| %>
+                    <%= msg%><br/>
+                  <% end %>
+                </div>
               <% end %>
-            </ul>
-          </div>
-          <% end %>
-
-            <div class="form-group">
               <%= f.text_field :firstname, placeholder: "First name", class: "form-control"%><br/>
               <%= f.email_field :email, placeholder: "Email", class: "form-control" %>
-            </div>
-            <%= f.submit "Sign up", class: "btn btn-danger"%>
+              <p><%= f.submit "Sign up", class: "btn"%></p>
           <% end %>
-        </div>
-      </div>
     </div>
 </div>

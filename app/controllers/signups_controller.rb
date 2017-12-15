@@ -10,7 +10,7 @@ class SignupsController < ApplicationController
       render 'new'
     end
   end
-  
+
   private
   def signup_params
     params.require(:signup).permit(:firstname,:email)
