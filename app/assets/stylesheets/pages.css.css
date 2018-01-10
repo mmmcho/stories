@@ -1,4 +1,4 @@
-@font-face {
+/**@font-face {
   font-family: 'Abril Fatface';
   font-style: normal;
   font-weight: 400;
@@ -15,11 +15,7 @@
 * {
   box-sizing: border-box;
 }
-/*
-blue: #10b0d8
-gold: #ffb78c
-red: #B9361A
-*/
+
 html,body {
   margin: 0px;
   font-family: "Work Sans", "Arial", sans-serif;
@@ -152,3 +148,4 @@ h2 {
   cursor:pointer;
   width: 24px;
   }
+**/

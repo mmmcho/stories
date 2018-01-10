@@ -1,3 +1,206 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$darkorange: #B9361A;
+$redbrown: #951D04;
+$peach: #FFB78C;
+$blue: #10b0d8;
+$redorange: #AA2104;
+$lightgray: #F5F5F5;
+$darkwhite: #F9F9F9;
+$parallax-height: 100vh;
+$center-margin: 0px auto;
+@font-face {
+  font-family: 'Abril Fatface';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Abril Fatface'), local('AbrilFatface-Regular'), url(https://fonts.gstatic.com/s/abrilfatface/v9/X1g_KwGeBV3ajZIXQ9VnDgYWpCd0FFfjqwFBDnEN0bM.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Work Sans Medium'), local('WorkSans-Medium'), url(https://fonts.gstatic.com/s/worksans/v3/Nbre-U_bp6Xktt8cpgwaJBampu5_7CjHW5spxoeN3Vs.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+@mixin background-size($size) {
+  background-size: $size;
+  -webkit-background-size: $size;
+  -moz-background-size: $size;
+  -o-background-size: $size;
+}
+@mixin parallax-background($file) {
+  background: url($file) no-repeat center center fixed;
+  @include background-size(cover);
+}
+/*
+* {
+  box-sizing: border-box;
+}
+*/
+html,body {
+  margin: 0px;
+  font-family: "Work Sans", "Arial", sans-serif;
+  text-align: center;
+}
+h1 {
+  font-size:55px;
+  font-weight: 900;
+  font-family: "Abril Fatface", sans-serif;
+  letter-spacing: 2px;
+  color:white;
+  text-shadow:0 2px 3px rgba(0,0,0,0.4);
+  margin-bottom: 20px;
+}
+h2 {
+  font-size:45px;
+  color:$darkorange;
+  padding: .55rem 0;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-family: "Abril Fatface", sans-serif;
+  margin-top: 0px;
+}
+.quote {
+  display: block;
+  padding: 4.44rem 0;
+  margin-bottom: 3.33rem;
+  border-top: 4px solid $darkorange;
+  border-bottom: 4px solid $darkorange;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: $darkorange;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.btn {
+  border-radius:3px;
+  font-size:16px;
+  padding:12px 26px;
+  margin: 10px;
+  background-color:$darkorange;
+  border-color: $redbrown;
+  color: white;
+  text-decoration: none;
+  &:hover {
+    background-color:$redorange;
+    border-color:$redbrown;
+  }
+}
+#home-main {
+  @include parallax-background("beach.jpg");
+  width: 100%;
+  height: $parallax-height;
+  perspective: 1px;
+  transform: translateZ(-1px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  h2 {
+    text-shadow:0 2px 3px rgba(0,0,0,0.4);
+  }
+}
+#home-secondary {
+  @include parallax-background("venice.jpg");
+  width: 100%;
+  height: $parallax-height;
+  perspective: 1px;
+  transform: translateZ(-1px);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+#about-main {
+  @include parallax-background("gondola.jpg");
+  width: 100%;
+  height: $parallax-height;
+  perspective: 1px;
+  transform: translateZ(-1px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  .banner {
+    top: 300px;
+  }
+}
+#contact-main {
+  @include parallax-background("jellyfish.jpg");
+  width: 100%;
+  height: $parallax-height;
+  perspective: 1px;
+  transform: translateZ(-1px);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.container {
+  display: grid;
+}
+
+.banner {
+  position: relative;
+  top: 100px;
+}
+.home-supporting,.home-about,.about-supporting {
+  padding:80px 0;
+}
+
+.footer {
+  background-color:$darkwhite;
+  border-top:solid 1px $lightgray;
+  padding:40px 0 30px 0;
+  p {
+    text-transform:uppercase;
+    font-size:12px;
+    color:$darkorange;
+  }
+}
+
+.smenu {
+  background-color:white;
+  height:100%;
+  position:fixed;
+  top:0;width:240px;
+  left:-240px;
+  z-index:100;
+  text-align: left;
+  ul {
+    list-style:none;
+    padding-left:0;
+    li{
+      a{
+        color:black;
+        display:block;
+        font-size:18px;
+        font-weight:bold;
+        padding:30px 40px;
+        &:visited {
+          color:black;
+          display:block;
+          font-size:18px;
+          font-weight:bold;
+          padding:30px 40px;
+        }
+        &:hover {
+            color:$darkorange;
+        }
+      }
+    }
+  }
+  .close-icon {
+    position:absolute;
+    top:30px;
+    right:30px;
+    cursor:pointer;
+    width: 24px;
+  }
+}
+
+.open-icon {
+  position:absolute;
+  top:30px;
+  left:30px;
+  cursor:pointer;
+  width: 24px;
+  }
